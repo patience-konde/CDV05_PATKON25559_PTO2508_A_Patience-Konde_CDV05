@@ -25,6 +25,90 @@
             </div>
         </div>
     </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/profile2.jpg" alt="profile picture">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Detail-oriented and highly motivated aspiring Front-End 
+                        Software Developer with strong fondation in HTML, CSSS, Javascripts and React.js 
+                        currently transitioning from beauty and customer servive backgrount into Spftware development.
+                        Experience in problem solving and user-focused thinking and working in high pressure environment.
+                        Passionate about building responsive ,accessible web application and continuously developing technical skills through hands on projects.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(this, 'skills')">Skilla</p>
+                         <p class="tab-links" onclick="opentab(this, 'experience')">Experience</p>
+                          <p class="tab-links" onclick="opentab(this, 'education')">Education</p>
+                    </div>
+                    <div id="skills" class="tab-contents active-tab">
+                        <ul>
+                          <li><span>HTML, CSS</span><br>Developind clean semantic, and accessible
+                            websites.
+                           </li>
+                          <li><span>Tailwind</span><br>Proficient building morden responsive
+                           user interfaces
+                          </li>
+                           <li><span>Javascript</span><br>Transfoming static designs into dynamic
+                           interactive digital experiences.
+                          </li>
+                          <li><span>React</span><br>Crafting  interactive web application
+                          through clean components architecture and  state management
+                          </li>
+                          <li><span>Version Control</span><br>Manage project source code using GIT & GITHUB</li>
+
+                        </ul>
+                    </div>
+                    <div id="experience" class="tab-contents">
+                        <ul>
+                          <li><span>Current</span><br>Beauty Therapist  at Sorbet Campsbay Capetown
+                           </li>
+                          <li><span>2015-2019</span><br>Beauty Therapist at Sorbet Gardens Capetown
+                          </li>
+                           <li><span>2012-2015</span><br>Store Supervisor at YEMAYA Canal walk Capetown
+                          </li>
+                          <li><span>2009-2011</span><br>Cashier at KFC Goodwood Capetown
+                          </li>
+                         
+
+                        </ul>
+                    </div>
+                    <div id="education" class="tab-contents">
+                        <ul>
+                          <li><span>2025</span><br>Software Development at CODSPACE Academy Capetown
+                           </li>
+                          <li><span>2011</span><br>Skin and Beauty at Cape Nail and Beauty Academy  Capetown
+                          </li>
+                           <li><span>2009</span><br> call center at Kingsway college Capetown
+                          </li>
+                         
+                         
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(element, tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            element.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
     
 </body>
 </html>
