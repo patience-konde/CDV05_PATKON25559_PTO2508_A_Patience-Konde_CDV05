@@ -11,18 +11,21 @@
     <div id="header">
         <div class="container">
             <nav>
-                <h1>My Website</h1>
+                <h1><span>Po</span>rtfolio</h1>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Project</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#Project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-text">
-                <p>Front-end & React Devoloper</p>
-                <h1>Hi I,m <span>Patience</span><br>Konde fron DR Congo</h1>
+                <img src="images/profile1.jpg" alt="Patience profile picture" class="header-profile">
+                <div class="header-copy">
+                    <p>Front-end & React Devoloper</p>
+                    <h1>Hi I,m <span>Patience</span><br>Konde from DR Congo</h1>
+                </div>
             </div>
         </div>
     </div>
@@ -42,11 +45,11 @@
                         Passionate about building responsive ,accessible web application and continuously developing technical skills through hands on projects.
                     </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab(this, 'skills')">Skilla</p>
+                        <p class="tab-links" onclick="opentab(this, 'skills')">Skilla</p>
                          <p class="tab-links" onclick="opentab(this, 'experience')">Experience</p>
                           <p class="tab-links" onclick="opentab(this, 'education')">Education</p>
                     </div>
-                    <div id="skills" class="tab-contents active-tab">
+                    <div id="skills" class="tab-contents">
                         <ul>
                           <li><span>HTML, CSS</span><br>Developind clean semantic, and accessible
                             websites.
@@ -144,7 +147,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-image-wrapper">
-                        <img src="images/picture1.jpg" alt="Portfolio project 1">
+                        <img src="images/picture.jpg" alt="Portfolio project 1">
                         <div class="portfolio-half-overlay"></div>
                     </div>
                     <div class="portfolio-caption">
@@ -214,28 +217,25 @@
                         <button type="submit" class="btn btn2">Send Message</button>
                     </form>
                 </div>
-                </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2026 Patience Konde. All rights reserved <i class="fa-regular fa-copyright"></i>.</p>
-        </div>
-     </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2026 Patience Konde. All rights reserved <i class="fa-regular fa-copyright"></i>.</p>
+    </div>
 
     <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+        const tabLinks = document.querySelectorAll(".tab-links");
+        const tabContents = document.querySelectorAll(".tab-contents");
 
         function opentab(element, tabname) {
-            for(tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
+            tabLinks.forEach(link => link.classList.remove("active-link"));
+            tabContents.forEach(content => content.classList.remove("active-tab"));
             element.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+
+        // Tabs remain closed until a tab is clicked by the user.
     </script>
     
 </body>
